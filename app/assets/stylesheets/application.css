@@ -22,6 +22,7 @@ h1, h2, p, strong, em, a {
   outline: 0;
   box-sizing: inherit;
   font: inherit;
+  font-family: 'Roboto';
   text-decoration: inherit;
   text-align: inherit;
   color: inherit;

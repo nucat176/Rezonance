@@ -8,13 +8,17 @@ const mapStateToProps = ({session}) => ({
 });
 
 const mapDispatchToProps = (dispatch, {location}) => {
-  const formType = location.pathname.slice(1);
-  const processForm = (formType === 'login') ? login : signup;
+  // const formType = location.pathname.slice(1);
+  // const processForm = (formType === 'login') ? login : signup;
+  //
+  return ({
+    login: user => dispatch(login(user)),
+    signup: user => dispatch(signup(user))
 
-  return {
-    processForm: user => dispatch(processForm(user)),
-    formType
-  };
+  });
+  //   processForm: user => dispatch(processForm(user)),
+  //   formType
+  // };
 };
 
 export default connect(
