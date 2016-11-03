@@ -15,16 +15,17 @@
  */
 
 html, body, section, article,
-h1, h2, p, strong, em, a {
+h1, h2, p, strong, em, a, div, span, input, ul {
   margin: 0;
   border: 0;
   padding: 0;
   outline: 0;
   box-sizing: inherit;
   font: inherit;
-  font-family: 'Roboto';
+  font-family: 'Exo';
   text-decoration: inherit;
   text-align: inherit;
   color: inherit;
   background: transparent;
+  list-style: none;
 }

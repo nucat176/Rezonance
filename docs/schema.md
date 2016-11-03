@@ -19,6 +19,8 @@ id          | integer   | not null, primary key
 title       | string    | not null
 artist_id   | integer   | not null, foreign key (references artists), indexed
 album_id    | integer   | not null, foreign key (references albums), indexed
+track_url   | string    | not null
+cover_url   | string    | not null
 
 ## albums
 column name | data type | details
@@ -27,6 +29,7 @@ id          | integer   | not null, primary key
 title       | string    | not null
 genre       | text      | not null
 artist_id   | integer   | not null, foreign key (references artists), indexed
+cover_url   | string    | not null
 
 ## artists
 column name | data type | details

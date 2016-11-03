@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link, withRouter} from 'react-router';
 import Modal from 'react-modal';
+import ModalStyle from './modal_style';
 
 class AuthForm extends React.Component {
   constructor(props){
@@ -37,11 +38,11 @@ class AuthForm extends React.Component {
 
   navLink(){
     if (this.state.formType === "login") {
-      return <span>don't have an account? Sign up <span className='signup-here'
-                                                        onClick={this.__handleSignupClick}>here!</span></span>;
+      return <span className='signup-here'>Don't have an account? Sign up <span className='signup-here'
+                                                        onClick={this.__handleSignupClick}><span className="here-button">here!</span></span></span>;
     } else {
-      return <span>already have an account? Log in <span className='login-here'
-                                                         onClick={this.__handleLoginClick}>here!</span></span>;
+      return <span className='login-here'>Already have an account? Log in <span className='login-here'
+                                                         onClick={this.__handleLoginClick}><span className="here-button">here!</span></span></span>;
     }
   }
 
@@ -78,38 +79,36 @@ class AuthForm extends React.Component {
     return (
       <div>
         <span className="log-in-button" onClick={this.__handleLoginClick}>Log In</span>
-        &nbsp;or&nbsp;
+        &nbsp;
+        &nbsp;
         <span className="sign-up-button" onClick={this.__handleSignupClick}>Sign Up</span>
         <Modal
           className='auth-form-modal'
           isOpen={this.state.modalOpen}
           onRequestClose={this.closeModal}
+          style={ModalStyle}
           >
           <div className="login-form-container">
             <form onSubmit={this.handleSubmit} className="login-form-box">
-              Welcome to Rezonance!
               <br/>
-              Please {this.state.formType} or {this.navLink()}
-              {this.renderErrors()}
+              <div className="form-errors">
+                {this.renderErrors()}
+              </div>
               <div className="login-form">
-                <label>
-                  Username:
-                  <input type='text'
-                    value={this.state.username}
-                    onChange={this.update("username")}
-                    className="login-input"/>
-                </label>
+                <input type='text'
+                  placeholder="Username"
+                  onChange={this.update("username")}
+                  className="login-input"/>
                 <br/>
-                <label>
-                  Password:
-                  <input type='password'
-                    value={this.state.password}
-                    onChange={this.update("password")}
-                    className="login-input"/>
-                  (Must be at least 6 characters)
-                </label>
+                <input type='password'
+                  placeholder="Password (Must be at least 6 characters)"
+                  onChange={this.update("password")}
+                  className="login-input"/>
                 <br/>
-                <input type="submit" value="Submit"/>
+                <input className="auth-form-submit-button" type="submit" value="Continue"/>
+                <br/>
+                <br/>
+                {this.navLink()}
               </div>
             </form>
           </div>

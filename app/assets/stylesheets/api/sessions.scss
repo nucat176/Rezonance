@@ -3,21 +3,139 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .login-signup {
+  width: 95%;
   display: flex;
   justify-content: space-between;
   padding: 20px;
+  color: white;
+}
+
+.splash-overlay {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0, 0, 0, .5);
+  position: absolute;
+}
+
+.splash-header {
+  margin-top: 100px;
+  font-size: 50px;
+  color: white;
 }
 
 .header-link {
   display: flex;
-  font-family: 'PT Sans Narrow', sans-serif;
+  font-weight: 100;
   width: 150px;
-  font-size: 16px;
+  font-size: 20px;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .logo {
   height: 30px;
   width: 45px;
+}
+
+.auth-form-modal {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  animation-name: fadeIn;
+  animation-duration: 0.4s;
+}
+
+.login-form-box {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+.login-input {
+  border: 1px solid white;
+  height: 40px;
+  width: 100%;
+  margin-top: 10px;
+  font-size: 12px;
+  color: white;
+}
+
+.auth-form-submit-button {
+  height: 40px;
+  width: 100%;
+  border: 1px solid orange;
+  background-color: orange;
+  margin-top: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+.login-form-container {
+  width: 100%
+}
+
+.here-button {
+  color: orange;
+  cursor: pointer;
+}
+
+.signup-here {
+  color: white;
+}
+
+.login-here {
+  color: white;
+}
+
+.splash-img {
+  width: 100%;
+}
+
+.splash-div {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.form-errors {
+  list-style: none;
+  color: white;
+  font-size: 12px;
+  padding-bottom: 20px;
+}
+
+.log-in-button {
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.sign-up-button {
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 2px;
+  cursor: pointer;
+}
+@keyframes fadeIn {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+@keyframes fadeOut {
+  from {opacity: 1}
+  to {opacity: 0}
 }
