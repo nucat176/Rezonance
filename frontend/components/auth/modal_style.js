@@ -9,10 +9,10 @@ const ModalStyle = {
   },
   content : {
     position        : 'absolute',
-    top             : '100px',
+    top             : '200px',
     left            : '30%',
     right           : '30%',
-    bottom          : '450px',
+    bottom          : '350px',
     border          : '1px solid #ccc',
     backgroundColor : 'rgba(0, 0, 0, .75)'
   }

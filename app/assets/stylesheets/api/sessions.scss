@@ -24,7 +24,7 @@
 }
 
 .splash-header {
-  margin-top: 500px;
+  margin-top: 650px;
   font-size: 50px;
   color: white;
 }
@@ -38,7 +38,7 @@
   align-items: center;
   justify-content: space-between;
   background-color: black;
-  border-radius: 10px;
+  border-radius: 5px;
   border: 1px solid orange;
 }
 
@@ -57,6 +57,7 @@
   animation-name: fadeIn;
   animation-duration: 0.4s;
   min-width: 20%;
+  border-radius: 5px;
 }
 
 .login-form-box {
