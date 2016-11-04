@@ -12,17 +12,18 @@ class AuthForm extends React.Component {
     this.__handleSignupClick = this.__handleSignupClick.bind(this);
     this.closeModal = this.closeModal.bind(this);
     this.processForm = this.processForm.bind(this);
+    this.renderErrors = this.renderErrors.bind(this);
   }
 
   componentDidUpdate(){
     this.redirectIfLoggedIn();
   }
 
-  // redirectIfLoggedIn(){
-  //   if (this.props.loggedIn){
-  //     this.props.router.push("/");
-  //   }
-  // }
+  redirectIfLoggedIn(){
+    if (this.props.loggedIn){
+      this.props.router.push("/home");
+    }
+  }
 
   handleSubmit(e){
     e.preventDefault();
@@ -118,4 +119,4 @@ class AuthForm extends React.Component {
   }
 }
 
-export default AuthForm;
+export default withRouter(AuthForm);

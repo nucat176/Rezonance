@@ -15,7 +15,7 @@
  */
 
 html, body, section, article,
-h1, h2, p, strong, em, a, div, span, input, ul {
+h1, h2, p, strong, em, a, div, span, input, ul, button {
   margin: 0;
   border: 0;
   padding: 0;

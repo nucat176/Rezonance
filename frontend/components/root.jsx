@@ -3,13 +3,16 @@ import {Provider} from 'react-redux';
 import {Router, Route, IndexRoute, hashHistory} from 'react-router';
 import App from './app';
 import AuthFormContainer from './auth/auth_form_container';
+import HomeContainer from './home/home_container';
+import SplashContainer from './splash/splash_container';
+import Charts from './home/charts';
 
 
 const Root = ({store}) => {
 
-  const _redirectIfLoggedIn = (nextState, replace) => {
+  const _redirectIfLoggedOut = (nextState, replace) => {
     const currentUser = store.getState().session.currentUser;
-    if (currentUser) {
+    if (!currentUser) {
       replace("/");
     }
   };
@@ -18,8 +21,10 @@ const Root = ({store}) => {
     <Provider store={store}>
       <Router history={hashHistory}>
         <Route path="/" component={App}>
-          <Route path="/login" component={AuthFormContainer} onEnter={_redirectIfLoggedIn} />
-          <Route path="/signup" component={AuthFormContainer} onEnter={_redirectIfLoggedIn} />
+          <IndexRoute component={SplashContainer}/>
+          <Route path="home" component={HomeContainer} onEnter={_redirectIfLoggedOut}>
+            <IndexRoute component={Charts}/>
+          </Route>
         </Route>
       </Router>
     </Provider>

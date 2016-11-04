@@ -4,9 +4,6 @@ import SplashContainer from './splash/splash_container';
 
 const App = ({children}) => (
   <div>
-    <header>
-      <SplashContainer/>
-    </header>
     {children}
   </div>
 );

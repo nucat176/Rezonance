@@ -8,10 +8,10 @@ const ModalStyle = {
     backgroundColor : 'rgba(0, 0, 0, 0)',
   },
   content : {
-    position        : 'fixed',
+    position        : 'absolute',
     top             : '300px',
-    left            : '600px',
-    right           : '600px',
+    left            : '30%',
+    right           : '30%',
     bottom          : '300px',
     border          : '1px solid #ccc',
     padding         : '40px',

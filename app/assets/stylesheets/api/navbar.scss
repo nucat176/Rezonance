@@ -1,0 +1,39 @@
+.home-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  color: white;
+  background-color: black;
+}
+
+.logout-button {
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.home-button {
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.home-page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.DirectoryBar {
+  width: 60%;
+  margin-left: 20px;
+  padding: 20px;
+  font-size: 30px;
+  border: 1px solid lightgray;
+}

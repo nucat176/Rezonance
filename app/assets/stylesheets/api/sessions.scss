@@ -6,6 +6,7 @@
   width: 95%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 20px;
   color: white;
 }
@@ -48,6 +49,7 @@
   text-align: center;
   animation-name: fadeIn;
   animation-duration: 0.4s;
+  min-width: 20%;
 }
 
 .login-form-box {
