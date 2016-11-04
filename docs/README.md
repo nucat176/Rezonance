@@ -1,7 +1,9 @@
 # Rezonance
 
+[Heroku link][heroku]
 [Trello link][trello]
 
+[heroku]: https://rezonance.herokuapp.com/#/
 [trello]: https://trello.com/b/6vfWsTzL/rezonance
 
 ## Minimum Viable Product
