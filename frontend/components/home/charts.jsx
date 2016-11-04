@@ -1,8 +1,15 @@
 import React from 'react';
+import TrackItem from './track_item';
 
-const Charts = () => {
+const Charts = ({tracks}) => {
   return (
-    <div>Charts</div>
+    <section className="tracks-section">
+      <ul>
+        {tracks.map(track => (
+          <TrackItem key={track.id} track={track} />
+        ))}
+      </ul>
+    </section>
   );
 };
 

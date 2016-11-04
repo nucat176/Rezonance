@@ -2,11 +2,11 @@ import {
   RECEIVE_TRACKS,
   RECEIVE_TRACK,
   REMOVE_TRACK
-} from '../actions/track_actions';
+} from '../actions/tracks_actions';
 
 import merge from 'lodash/merge';
 
-const TracksReducer = {oldState = {}, action} => {
+const TracksReducer = (oldState = {}, action) => {
   switch(action.type){
     case RECEIVE_TRACKS:
       return merge({}, action.tracks);
