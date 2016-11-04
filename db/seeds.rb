@@ -9,3 +9,7 @@
 User.create(username: "robert", password: "password")
 Track.create(title: "Insane", track_url: "abc", cover_url: "https://upload.wikimedia.org/wikipedia/en/8/8e/Flume_album_artwork.jpg")
 Track.create(title: "On Top", track_url: "def", cover_url: "https://upload.wikimedia.org/wikipedia/en/8/8e/Flume_album_artwork.jpg")
+Track.create(title: "Sintra", track_url: "jkl", cover_url: "https://upload.wikimedia.org/wikipedia/en/8/8e/Flume_album_artwork.jpg")
+Track.create(title: "Bring You Down", track_url: "ghi", cover_url: "https://upload.wikimedia.org/wikipedia/en/8/8e/Flume_album_artwork.jpg")
+Track.create(title: "Left Alone", track_url: "mno", cover_url: "https://upload.wikimedia.org/wikipedia/en/8/8e/Flume_album_artwork.jpg")
+Track.create(title: "Warm Thoughts", track_url: "pqr", cover_url: "https://upload.wikimedia.org/wikipedia/en/8/8e/Flume_album_artwork.jpg")

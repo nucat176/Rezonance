@@ -14,6 +14,15 @@ const sessionLinks = () => (
         <AuthFormContainer />
       </nav>
       <header className="splash-header">Immerse Yourself</header>
+      <p className="splash-description">
+        Welcome to Rezonance, the world's premier music portal for electronic music!
+        <br/>
+        <br/>
+        Here at Rezonance, we pride ourselves on our collection of music as well as our intense
+        community of musicians and fans. If you are an artist, we welcome you with open arms and only hope
+        you'll share your creations with the rest of the world. If you are a fan, you will not only be listening
+        to the hottest tracks - you will be completely immersed in them.
+      </p>
     </div>
     <img className="splash-img" src="https://static.events.ch/img/media/Concert.jpg"/>
   </div>

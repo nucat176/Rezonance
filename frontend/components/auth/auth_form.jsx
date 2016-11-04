@@ -13,6 +13,7 @@ class AuthForm extends React.Component {
     this.closeModal = this.closeModal.bind(this);
     this.processForm = this.processForm.bind(this);
     this.renderErrors = this.renderErrors.bind(this);
+    this.createFormHeader = this.createFormHeader.bind(this);
   }
 
   componentDidUpdate(){
@@ -49,6 +50,14 @@ class AuthForm extends React.Component {
 
   processForm(user){
     return this.state.formType === 'login' ? this.props.login(user) : this.props.signup(user);
+  }
+
+  createFormHeader(){
+    if (this.state.formType === 'login'){
+      return (<h1 className="form-header">Log In</h1>);
+    } else {
+      return (<h1 className="form-header">Sign Up</h1>);
+    }
   }
 
   renderErrors(){
@@ -96,6 +105,7 @@ class AuthForm extends React.Component {
                 {this.renderErrors()}
               </div>
               <div className="login-form">
+                {this.createFormHeader()}
                 <input type='text'
                   placeholder="Username"
                   onChange={this.update("username")}
@@ -110,6 +120,9 @@ class AuthForm extends React.Component {
                 <br/>
                 <br/>
                 {this.navLink()}
+                <br/>
+                <br/>
+                <button className="modal-close" onClick={this.closeModal}>Close</button>
               </div>
             </form>
           </div>

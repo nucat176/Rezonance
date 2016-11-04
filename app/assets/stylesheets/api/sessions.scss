@@ -24,7 +24,7 @@
 }
 
 .splash-header {
-  margin-top: 100px;
+  margin-top: 500px;
   font-size: 50px;
   color: white;
 }
@@ -34,8 +34,12 @@
   font-weight: 100;
   width: 150px;
   font-size: 20px;
+  padding: 10px;
   align-items: center;
   justify-content: space-between;
+  background-color: black;
+  border-radius: 10px;
+  border: 1px solid orange;
 }
 
 .logo {
@@ -47,6 +51,9 @@
   display: flex;
   justify-content: center;
   text-align: center;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 40px;
   animation-name: fadeIn;
   animation-duration: 0.4s;
   min-width: 20%;
@@ -80,8 +87,14 @@
   border: 1px solid orange;
   background-color: orange;
   margin-top: 20px;
-  color: white;
+  color: black;
   cursor: pointer;
+}
+
+.form-header {
+  font-size: 20px;
+  color: orange;
+  padding-bottom: 20px;
 }
 
 .login-form-container {
@@ -132,6 +145,20 @@
   border-radius: 2px;
   cursor: pointer;
 }
+
+.splash-description {
+  width: 50%;
+  display: flex;
+  text-align: center;
+  margin-top: 30px;
+  color: white;
+}
+
+.modal-close {
+  color: orange;
+  cursor: pointer;
+}
+
 @keyframes fadeIn {
     from {opacity: 0}
     to {opacity: 1}

@@ -1,0 +1,30 @@
+.tracks-section {
+  display: flex;
+  width: 60%;
+  margin-left: 20px;
+  padding: 20px;
+  border-left: 1px solid orange;
+  border-right: 1px solid orange;
+  border-bottom: 1px solid orange;
+  background-color: rgba(0, 0, 0, .5);
+}
+
+.cover-img {
+  height: 150px;
+  width: 150px;
+}
+
+.track-item {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.tracks-list {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  color: white;
+}
