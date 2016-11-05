@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
 import Modal from 'react-modal';
+import {fetchTrack, receiveTrack} from './actions/tracks_actions';
 
 document.addEventListener("DOMContentLoaded", () => {
   let store;
@@ -18,3 +19,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const root = document.getElementById("root");
   ReactDOM.render(<Root store={store}/>, root);
 });
+
+window.fetchTrack = fetchTrack;
+window.receiveTrack = receiveTrack;

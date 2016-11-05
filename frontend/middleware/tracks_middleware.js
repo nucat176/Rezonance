@@ -23,7 +23,6 @@ const TracksMiddleware = ({getState, dispatch}) => next => action => {
   let receiveTracksSuccess = tracks => dispatch(receiveTracks(tracks));
   let receiveTrackSuccess = track => dispatch(receiveTrack(track));
   let removeTrackSuccess = track => dispatch(removeTrack(track));
-
   switch(action.type){
     case FETCH_TRACKS:
       fetchTracks(receiveTracksSuccess, error);

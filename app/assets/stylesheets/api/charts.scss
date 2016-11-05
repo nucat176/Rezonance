@@ -12,6 +12,7 @@
 .cover-img {
   height: 150px;
   width: 150px;
+  cursor: pointer;
 }
 
 .track-item {
@@ -25,4 +26,14 @@
   width: 100%;
   flex-wrap: wrap;
   color: white;
+}
+
+.brightness {
+  background-color: white;
+  display: inline-block;
+  height: 150px;
+}
+
+.brightness .cover-img:hover {
+  opacity: .5;
 }

@@ -1,16 +1,18 @@
 import { connect } from 'react-redux';
 import { logout } from '../../actions/session_actions';
-import { fetchTracks, deleteTrack, createTrack } from '../../actions/tracks_actions';
+import { fetchTracks, deleteTrack, createTrack, fetchTrack } from '../../actions/tracks_actions';
 import Home from './home';
 
 const mapStateToProps = state => ({
   currentUser: state.session.currentUser,
-  tracks: Object.keys(state.tracks).map(id => state.tracks.id)
+  tracks: Object.keys(state.tracks).map(id => state.tracks.id),
+  track: state.track
 });
 
 const mapDispatchToProps = dispatch => ({
   logout: () => dispatch(logout()),
   fetchTracks: () => dispatch(fetchTracks()),
+  fetchTrack: (id) => dispatch(fetchTrack(id)),
   deleteTrack: id => dispatch(deleteTrack(id)),
   createTrack: track => dispatch(createTrack(track))
 });

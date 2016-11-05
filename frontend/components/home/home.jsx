@@ -1,16 +1,28 @@
 import React from 'react';
 import NavBar from './nav_bar';
 import DirectoryBar from './directory_bar';
+import ReactAudioPlayer from 'react-audio-player';
 
-const Home = ({currentUser, logout, tracks, fetchTracks, deleteTrack, createTrack, children}) => (
-  <div className="home-page">
-    <div className="home-overlay">
-      <NavBar currentUser={currentUser} logout={logout}/>
-      <DirectoryBar/>
-      {children}
-    </div>
-    <img className="splash-img" src="https://static.events.ch/img/media/Concert.jpg"/>
-  </div>
-);
+class Home extends React.Component {
+  constructor(props){
+    super(props);
+  }
+
+  render(){
+
+    return (
+      <div className="home-page">
+        <div className="home-overlay">
+          <NavBar currentUser={this.props.currentUser} logout={this.props.logout}/>
+          <DirectoryBar/>
+          {this.props.children}
+        </div>
+        <img className="splash-img" src="http://res.cloudinary.com/dfufqfnjx/image/upload/v1478371800/Concert_hledmj.jpg"/>
+        <ReactAudioPlayer src={this.props.track.track_url} autoplay={true}/>
+      </div>
+    );
+  }
+
+}
 
 export default Home;

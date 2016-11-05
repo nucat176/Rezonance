@@ -1,15 +1,17 @@
 import { connect } from 'react-redux';
-import { fetchTracks, deleteTrack, createTrack } from '../../actions/tracks_actions';
+import { fetchTracks, deleteTrack, createTrack, fetchTrack } from '../../actions/tracks_actions';
 import Charts from './charts';
 
 const mapStateToProps = state => ({
-  tracks: Object.keys(state.tracks).map(id => state.tracks[id])
+  tracks: Object.keys(state.tracks).map(id => state.tracks[id]),
+  track: state.track
 });
 
 const mapDispatchToProps = dispatch => ({
   fetchTracks: () => dispatch(fetchTracks()),
   deleteTrack: id => dispatch(deleteTrack(id)),
-  createTrack: track => dispatch(createTrack(track))
+  createTrack: track => dispatch(createTrack(track)),
+  fetchTrack: id => dispatch(fetchTrack(id))
 });
 
 export default connect(
