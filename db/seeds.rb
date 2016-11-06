@@ -14,3 +14,7 @@ Track.create(title: "Bring You Down", track_url: "ghi", cover_url: "https://uplo
 Track.create(title: "Left Alone", track_url: "mno", cover_url: "https://upload.wikimedia.org/wikipedia/en/8/8e/Flume_album_artwork.jpg")
 Track.create(title: "Warm Thoughts", track_url: "pqr", cover_url: "https://upload.wikimedia.org/wikipedia/en/8/8e/Flume_album_artwork.jpg")
 Track.create(title: "Shameless", track_url: "http://res.cloudinary.com/dfufqfnjx/video/upload/v1478372611/08_Shameless_o8jp5a.mp3", cover_url: "http://res.cloudinary.com/dfufqfnjx/image/upload/v1478375780/99bf5594_yxka4k.jpg")
+Artist.create(name: "Flume")
+Artist.create(name: "The Weeknd")
+Album.create(title: "Flume (2012)", genre: "Electronic", artist_id: 1, cover_url: "https://upload.wikimedia.org/wikipedia/en/8/8e/Flume_album_artwork.jpg")
+Album.create(title: "Beauty Behind the Madness", genre: "Electronic R&B", artist_id: 2, cover_url: "http://res.cloudinary.com/dfufqfnjx/image/upload/v1478375780/99bf5594_yxka4k.jpg")

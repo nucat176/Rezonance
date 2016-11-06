@@ -1,21 +1,19 @@
 # == Schema Information
 #
-# Table name: tracks
+# Table name: albums
 #
 #  id         :integer          not null, primary key
 #  title      :string           not null
-#  track_url  :string           not null
+#  genre      :string           not null
+#  artist_id  :integer          not null
 #  cover_url  :string           not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
-#  artist_id  :integer
-#  album_id   :integer
 #
 
-class Track < ActiveRecord::Base
+class Album < ActiveRecord::Base
 
-  validates :title, :track_url, :cover_url, :artist_id, :album_id, presence: true
+  validates :title, :genre, :artist_id, :cover_url, null: false
 
   belongs_to :artist
-
 end
