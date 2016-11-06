@@ -16,6 +16,14 @@ class Track < ActiveRecord::Base
 
   validates :title, :track_url, :cover_url, :artist_id, :album_id, presence: true
 
-  belongs_to :artist
+  belongs_to :artist,
+    class_name: :Artist,
+    primary_key: :id,
+    foreign_key: :artist_id
+
+  belongs_to :album,
+    class_name: :Album,
+    primary_key: :id,
+    foreign_key: :album_id
 
 end
