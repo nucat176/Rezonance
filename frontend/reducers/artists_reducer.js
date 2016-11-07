@@ -2,7 +2,7 @@ import {
   RECEIVE_ARTISTS,
   RECEIVE_ARTIST,
   REMOVE_ARTIST
-} from '../actions/artists_actions';
+} from '../actions/artist_actions';
 
 import merge from 'lodash/merge';
 

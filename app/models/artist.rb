@@ -2,15 +2,16 @@
 #
 # Table name: artists
 #
-#  id         :integer          not null, primary key
-#  name       :string           not null
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
+#  id             :integer          not null, primary key
+#  name           :string           not null
+#  created_at     :datetime         not null
+#  updated_at     :datetime         not null
+#  artist_img_url :string
 #
 
 class Artist < ActiveRecord::Base
 
-  validates :name, presence: true
+  validates :name, :artist_img_url, presence: true
 
   has_many :tracks,
     class_name: :Track,

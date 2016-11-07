@@ -2,7 +2,7 @@ import {
   RECEIVE_ALBUMS,
   RECEIVE_ALBUM,
   REMOVE_ALBUM
-} from '../actions/albums_actions';
+} from '../actions/album_actions';
 
 import merge from 'lodash/merge';
 
