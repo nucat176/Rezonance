@@ -14,7 +14,7 @@
 
 class Track < ActiveRecord::Base
 
-  validates :title, :track_url, :cover_url, :artist_id, :album_id, presence: true
+  validates :title, :track_url, :cover_url, presence: true
 
   belongs_to :artist,
     class_name: :Artist,

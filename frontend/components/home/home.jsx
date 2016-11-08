@@ -18,7 +18,7 @@ class Home extends React.Component {
           {this.props.children}
         </div>
         <img className="splash-img" src="http://res.cloudinary.com/dfufqfnjx/image/upload/v1478371800/Concert_hledmj.jpg"/>
-        <ReactAudioPlayer src={this.props.track.track_url} autoplay={true}/>
+        <ReactAudioPlayer src={this.props.currentTrack.track_url} autoplay={true}/>
       </div>
     );
   }

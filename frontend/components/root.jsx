@@ -8,7 +8,8 @@ import SplashContainer from './splash/splash_container';
 import ChartsContainer from './home/charts_container';
 import ArtistsContainer from './home/artists_container';
 import AlbumsContainer from './home/albums_container';
-import {fetchTracks} from '../actions/tracks_actions';
+import TrackContainer from './home/track_container';
+import {fetchTracks, fetchTrack} from '../actions/tracks_actions';
 import {fetchArtists} from '../actions/artist_actions';
 import {fetchAlbums} from '../actions/album_actions';
 
@@ -26,6 +27,10 @@ const Root = ({store}) => {
     store.dispatch(fetchTracks());
   };
 
+  const _fetchTrack = (nextState) => {
+    store.dispatch(fetchTrack(nextState.params.track_id));
+  };
+
   const _fetchArtists = () => {
     store.dispatch(fetchArtists());
   };
@@ -41,6 +46,7 @@ const Root = ({store}) => {
           <IndexRoute component={SplashContainer}/>
           <Route path="home" component={HomeContainer} onEnter={_redirectIfLoggedOut}>
             <IndexRoute component={ChartsContainer} onEnter={_fetchTracks}/>
+            <Route path="tracks/:track_id" component={TrackContainer} onEnter={_fetchTrack}/>
             <Route path="artists" component={ArtistsContainer} onEnter={_fetchArtists}/>
             <Route path="albums" component={AlbumsContainer} onEnter={_fetchAlbums}/>
           </Route>
