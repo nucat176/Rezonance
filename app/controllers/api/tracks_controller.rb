@@ -20,7 +20,7 @@ class Api::TracksController < ApplicationController
   def update
     @track = Track.find(params[:id])
     if @track.update_attributes(track_params)
-      render "api/tracks/#{@track.id}"
+      render "api/tracks/show"
     else
       render json: @track.errors.full_messages, status: 422
     end
@@ -29,7 +29,7 @@ class Api::TracksController < ApplicationController
   def destroy
     @track = Track.find(params[:id])
     @track.destroy
-    render "api/tracks", status: 200;
+    render "api/tracks/show", status: 200;
   end
 
   private

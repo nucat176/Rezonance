@@ -14,13 +14,17 @@
 .delete-button {
   color: white;
   border: 1px solid white;
-  border-radius: 5px;
+  border-radius: 2px;
   cursor: pointer;
-  padding: 5px;
+  padding: 10px;
   margin: 20px;
 }
 
 .track-title {
   font-size: 20px;
   margin: 20px;
+}
+
+.track-index-title {
+  margin: 10px;
 }

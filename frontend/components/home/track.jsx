@@ -1,5 +1,6 @@
 import React from 'react';
 import {hashHistory} from 'react-router';
+import UpdateTrackContainer from './update_track_container';
 
 class Track extends React.Component {
   constructor(props){
@@ -18,6 +19,7 @@ class Track extends React.Component {
         <span className="track-title">{this.props.track.title}</span>
         <img src={this.props.track.cover_url} className="cover-img"/>
         <button onClick={this.handleDelete} className="delete-button">Delete</button>
+        <UpdateTrackContainer/>
       </div>
     );
   }

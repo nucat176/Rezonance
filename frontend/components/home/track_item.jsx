@@ -9,7 +9,7 @@ const TrackItem = ({track, handleClick, handleCurrentClick}) => {
         to={`/home/tracks/${track.id}`}
         onClick={handleClick}
         className="track-link">
-        {track.id}: {track.title}
+        <h1 className="track-index-title">{track.title}</h1>
       </Link>
       <div className="brightness">
         <img className="cover-img" src={track.cover_url} onClick={handleCurrentClick}/>

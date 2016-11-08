@@ -9,6 +9,7 @@ import ChartsContainer from './home/charts_container';
 import ArtistsContainer from './home/artists_container';
 import AlbumsContainer from './home/albums_container';
 import TrackContainer from './home/track_container';
+import ProfileContainer from './home/profile_container';
 import {fetchTracks, fetchTrack} from '../actions/tracks_actions';
 import {fetchArtists} from '../actions/artist_actions';
 import {fetchAlbums} from '../actions/album_actions';
@@ -28,7 +29,7 @@ const Root = ({store}) => {
   };
 
   const _fetchTrack = (nextState) => {
-    store.dispatch(fetchTrack(nextState.params.track_id));
+    store.dispatch(fetchTrack(nextState.params.id));
   };
 
   const _fetchArtists = () => {
@@ -46,9 +47,10 @@ const Root = ({store}) => {
           <IndexRoute component={SplashContainer}/>
           <Route path="home" component={HomeContainer} onEnter={_redirectIfLoggedOut}>
             <IndexRoute component={ChartsContainer} onEnter={_fetchTracks}/>
-            <Route path="tracks/:track_id" component={TrackContainer} onEnter={_fetchTrack}/>
+            <Route path="tracks/:id" component={TrackContainer} onEnter={_fetchTrack}/>
             <Route path="artists" component={ArtistsContainer} onEnter={_fetchArtists}/>
             <Route path="albums" component={AlbumsContainer} onEnter={_fetchAlbums}/>
+            <Route path="users/:id" component={ProfileContainer} onEnter={_redirectIfLoggedOut}/>
           </Route>
         </Route>
       </Router>

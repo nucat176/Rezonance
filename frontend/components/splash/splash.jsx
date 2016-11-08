@@ -15,7 +15,7 @@ const sessionLinks = () => (
       </nav>
       <header className="splash-header">Immerse Yourself</header>
       <p className="splash-description">
-        Welcome to Rezonance, the world's premier music portal for electronic music!
+        Welcome to Rezonance, the world's premier portal for electronic music!
         <br/>
         <br/>
         Here at Rezonance, we pride ourselves on our collection of music as well as our intense

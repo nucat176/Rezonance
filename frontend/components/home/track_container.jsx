@@ -1,5 +1,5 @@
 import {connect} from 'react-redux';
-import {fetchTrack, deleteTrack, fetchCurrentTrack} from '../../actions/tracks_actions';
+import {fetchTrack, deleteTrack, fetchCurrentTrack, updateTrack} from '../../actions/tracks_actions';
 import Track from './track';
 
 const mapStateToProps = state => ({
@@ -10,7 +10,8 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   fetchTrack: id => dispatch(fetchTrack(id)),
   fetchCurrentTrack: id => dispatch(fetchCurrentTrack(id)),
-  deleteTrack: id => dispatch(deleteTrack(id))
+  deleteTrack: id => dispatch(deleteTrack(id)),
+  updateTrack: track => dispatch(updateTrack(track))
 });
 
 export default connect(
