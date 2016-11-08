@@ -22,7 +22,7 @@ class NavBar extends React.Component{
   render(){
     return(
       <nav className="home-nav">
-        <Link to="/" className="header-link">
+        <Link to="/home" className="header-link">
           <img className="logo" src="http://www.clipartkid.com/images/703/radio-waves-hpg-clip-art-at-clker-com-vector-clip-art-online-S1wXRS-clipart.png"/>
           <h1>Rezonance</h1>
         </Link>

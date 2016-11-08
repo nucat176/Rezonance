@@ -29,7 +29,7 @@ class Api::TracksController < ApplicationController
   def destroy
     @track = Track.find(params[:id])
     @track.destroy
-    render 'api/tracks'
+    render "api/tracks", status: 200;
   end
 
   private

@@ -10,3 +10,17 @@
 .track-link:hover {
   text-decoration: underline;
 }
+
+.delete-button {
+  color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 5px;
+  margin: 20px;
+}
+
+.track-title {
+  font-size: 20px;
+  margin: 20px;
+}
