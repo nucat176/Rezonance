@@ -14,6 +14,8 @@ class AuthForm extends React.Component {
     this.processForm = this.processForm.bind(this);
     this.renderErrors = this.renderErrors.bind(this);
     this.createFormHeader = this.createFormHeader.bind(this);
+    this.startUsernameAnimation = this.startUsernameAnimation.bind(this);
+    this.startPasswordAnimation = this.startPasswordAnimation.bind(this);
   }
 
   componentDidUpdate(){
@@ -81,6 +83,42 @@ class AuthForm extends React.Component {
     this.setState({modalOpen: true, formType: "signup"});
   }
 
+  startUsernameAnimation(){
+    this.setState({modalOpen: true, formType: "login"});
+		if(this.state.username.length > 0 || this.state.password.length > 0){
+			this.clearFields();
+		}
+
+		const demoUser = 'guest';
+		let usernameID = setInterval(() => {
+			document.getElementById('username').focus();
+			let currLength = this.state.username.length;
+
+			if(currLength < demoUser.length){
+				this.setState({username: this.state.username + demoUser.slice(currLength, currLength + 1)});
+			} else{
+				clearInterval(usernameID);
+				this.startPasswordAnimation();
+			}
+		}, 100);
+	}
+
+	startPasswordAnimation(){
+		const demoPassword = 'password';
+		let passwordID = setInterval(() => {
+			document.getElementById('password').focus();
+			let currLength = this.state.password.length;
+
+			if(currLength < demoPassword.length){
+				this.setState({password: this.state.password + demoPassword.slice(currLength, currLength + 1)});
+			} else{
+				clearInterval(passwordID);
+        const user = {username: this.state.username, password: this.state.password};
+        this.processForm(user);
+			}
+		}, 100);
+	}
+
   closeModal(){
     this.setState({modalOpen: false});
   }
@@ -92,6 +130,9 @@ class AuthForm extends React.Component {
         &nbsp;
         &nbsp;
         <span className="sign-up-button" onClick={this.__handleSignupClick}>Sign Up</span>
+        &nbsp;
+        &nbsp;
+        <span className="sign-up-button" onClick={this.startUsernameAnimation}>Guest Log In</span>
         <Modal
           className='auth-form-modal'
           isOpen={this.state.modalOpen}
@@ -107,11 +148,13 @@ class AuthForm extends React.Component {
               <div className="login-form">
                 {this.createFormHeader()}
                 <input type='text'
+                  id="username"
                   placeholder="Username"
                   onChange={this.update("username")}
                   className="login-input"/>
                 <br/>
                 <input type='password'
+                  id="password"
                   placeholder="Password (Must be at least 6 characters)"
                   onChange={this.update("password")}
                   className="login-input"/>
