@@ -1,5 +1,13 @@
 .play-button {
   cursor: pointer;
+  height: 37px;
+  width: 37px;
+  padding-left: 5px;
+  padding-right: 8px;
+}
+
+.pause-button {
+  cursor: pointer;
   height: 50px;
   width: 50px;
 }
