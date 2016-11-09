@@ -6,6 +6,7 @@ class AudioPlayer extends React.Component {
     super(props);
     this.state = {currentTrack: this.props.currentTrack, playing: this.props.playing};
     this.togglePlay = this.togglePlay.bind(this);
+    this.renderPlayer = this.renderPlayer.bind(this);
   }
 
   togglePlay(){
@@ -18,6 +19,24 @@ class AudioPlayer extends React.Component {
     }
   }
 
+  renderPlayer(){
+    if (this.props.currentTrack){
+      return (
+        <ReactPlayer
+          url={this.props.currentTrack.track_url}
+          playing={this.props.playing}
+          hidden={true}/>
+      );
+    } else {
+      return (<span></span>);
+    }
+  }
+
+  componentWillReceiveProps(nextProps){
+    this.setState({currentTrack: nextProps.currentTrack});
+    this.setState({playing: nextProps.playing});
+  }
+
   render(){
     return (
       <div className="audio-player">
@@ -26,7 +45,7 @@ class AudioPlayer extends React.Component {
           <img src={this.props.currentTrack.cover_url} className="playback-cover"/>
           <h1 className="player-song-title">{this.props.currentTrack.title}</h1>
         </span>
-        <ReactPlayer url={this.props.currentTrack.track_url} playing={this.props.playing} hidden={true}/>
+        {this.renderPlayer()}
       </div>
     );
   }
