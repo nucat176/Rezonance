@@ -3,11 +3,18 @@
   justify-content: space-between;
   align-items: center;
   padding: 40px;
-  margin-left: 20px;
-  margin-right: 20px;
   color: white;
   background-color: rgba(0, 0, 0, .75);
   border: 1px solid orange;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin-left: 20px;
+  margin-right: 20px;
+  justify-content: space-between;
 }
 
 .logout-button {
@@ -15,6 +22,7 @@
   border: 1px solid white;
   border-radius: 2px;
   cursor: pointer;
+  margin-left: 10px;
 }
 
 .home-button {
@@ -24,17 +32,7 @@
   cursor: pointer;
 }
 
-.home-page {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  margin: 0 auto;
-  position: relative;
-}
-
 .DirectoryBar {
-  margin-left: 20px;
-  margin-right: 20px;
   padding: 20px;
   font-size: 30px;
   border-right: 1px solid orange;
@@ -50,7 +48,7 @@
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, .5);
-  position: absolute;
+  position: fixed;
 }
 
 .charts-link {
@@ -59,4 +57,9 @@
 
 .charts-link:hover {
   text-decoration: underline;
+}
+
+.option-buttons {
+  display: flex;
+  align-items: center;
 }

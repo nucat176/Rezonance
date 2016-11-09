@@ -1,5 +1,30 @@
-.react-player {
+.play-button {
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+}
+
+.audio-player {
+  display: flex;
+  background-color: rgba(0, 0, 0, .75);
+  align-items: center;
+  border: 1px solid orange;
   width: 100%;
-  position: fixed;
-  bottom: 0;
+  height: 100px;
+}
+
+.audio-buttons {
+  display: flex;
+  padding: 20px;
+  align-items: center;
+}
+
+.playback-cover {
+  height: 50px;
+  width: 50px;
+  margin: 20px;
+}
+
+.player-song-title {
+  color: white;
 }

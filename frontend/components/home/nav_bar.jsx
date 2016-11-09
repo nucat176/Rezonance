@@ -26,8 +26,10 @@ class NavBar extends React.Component{
           <img className="logo" src="http://www.clipartkid.com/images/703/radio-waves-hpg-clip-art-at-clker-com-vector-clip-art-online-S1wXRS-clipart.png"/>
           <h1>Rezonance</h1>
         </Link>
-        <UploadContainer/>
-        <button className="logout-button" onClick={this.handleLogout}>Log Out</button>
+        <span className="option-buttons">
+          <UploadContainer/>
+          <button className="logout-button" onClick={this.handleLogout}>Log Out</button>
+        </span>
       </nav>
     );
   }

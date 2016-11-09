@@ -8,6 +8,7 @@ export const RECEIVE_TRACKS = "RECEIVE_TRACKS";
 export const RECEIVE_TRACK = "RECEIVE_TRACK";
 export const REMOVE_TRACK = "REMOVE_TRACK";
 export const RECEIVE_CURRENT_TRACK = "RECEIVE_CURRENT_TRACK";
+export const RECEIVE_PLAYING = "RECEIVE_PLAYING";
 
 export const fetchTracks = () => ({
   type: FETCH_TRACKS
@@ -56,4 +57,9 @@ export const removeTrack = track => ({
 export const receiveCurrentTrack = track => ({
   type: RECEIVE_CURRENT_TRACK,
   track
+});
+
+export const receivePlaying = playing => ({
+  type: RECEIVE_PLAYING,
+  playing
 });

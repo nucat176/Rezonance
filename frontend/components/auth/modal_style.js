@@ -1,6 +1,8 @@
 const ModalStyle = {
   overlay : {
     position        : 'fixed',
+    display         : 'flex',
+    justifyContent  : 'center',
     top             : 0,
     left            : 0,
     right           : 0,
@@ -9,10 +11,9 @@ const ModalStyle = {
   },
   content : {
     position        : 'absolute',
-    top             : '200px',
-    left            : '30%',
-    right           : '30%',
-    bottom          : '350px',
+    top             : '150px',
+    width           : '500px',
+    height          : '400px',
     border          : '1px solid #ccc',
     backgroundColor : 'rgba(0, 0, 0, .75)'
   }

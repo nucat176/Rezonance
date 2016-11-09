@@ -2,6 +2,7 @@ import React from 'react';
 import NavBar from './nav_bar';
 import DirectoryBar from './directory_bar';
 import ReactPlayer from 'react-player';
+import AudioPlayerContainer from './audio_player_container';
 
 class Home extends React.Component {
   constructor(props){
@@ -11,14 +12,19 @@ class Home extends React.Component {
   render(){
 
     return (
-      <div className="home-page">
+      <div className="splash-div">
         <div className="home-overlay">
-          <NavBar currentUser={this.props.currentUser} logout={this.props.logout}/>
-          <DirectoryBar/>
-          {this.props.children}
+          <div className="home">
+            <div className="not-audio-player">
+              <NavBar currentUser={this.props.currentUser} logout={this.props.logout}/>
+              <DirectoryBar/>
+              {this.props.children}
+            </div>
+            <div className="audio-player-container">
+              <AudioPlayerContainer/>
+            </div>
+          </div>
         </div>
-        <img className="splash-img" src="http://res.cloudinary.com/dfufqfnjx/image/upload/v1478371800/Concert_hledmj.jpg"/>
-        <ReactPlayer url={this.props.currentTrack.track_url} playing={true}/>
       </div>
     );
   }

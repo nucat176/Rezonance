@@ -9,7 +9,12 @@ class Charts extends React.Component {
   }
 
   handleFetchCurrentTrack(id){
-    return e => this.props.fetchCurrentTrack(id);
+    return (
+      e => {
+        this.props.fetchCurrentTrack(id);
+        this.props.receivePlaying(true);
+      }
+    );
   }
 
   handleFetchTrack(id){

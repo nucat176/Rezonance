@@ -1,7 +1,5 @@
 .tracks-section {
   display: flex;
-  margin-left: 20px;
-  margin-right: 20px;
   padding: 20px;
   border-left: 1px solid orange;
   border-right: 1px solid orange;
@@ -13,6 +11,7 @@
   height: 150px;
   width: 150px;
   cursor: pointer;
+  border: 1px solid lightgray;
 }
 
 .track-item {
@@ -36,6 +35,7 @@
   display: inline-block;
   height: 150px;
   width: 150px;
+  background-image: url("http://res.cloudinary.com/dfufqfnjx/image/upload/c_scale,w_150/v1478638396/play-overlay_gvvqs6.png");
 }
 
 .brightness .cover-img:hover {

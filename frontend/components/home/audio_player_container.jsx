@@ -1,16 +1,17 @@
 import { connect } from 'react-redux';
-import { fetchTrack } from '../../actions/tracks_actions';
-import ReactAudioPlayer from 'react-audio-player';
+import { receivePlaying } from '../../actions/tracks_actions';
+import AudioPlayer from './audio_player';
 
 const mapStateToProps = state => ({
-  currentTrack: state.track
+  currentTrack: state.currentTrack,
+  playing: state.playback.playing,
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchTrack: (id) => dispatch(fetchTrack(id))
+  receivePlaying: playing => dispatch(receivePlaying(playing))
 });
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(ReactAudioPlayer);
+)(AudioPlayer);

@@ -24,7 +24,6 @@ const sessionLinks = () => (
         to the hottest tracks - you will be completely immersed in them.
       </p>
     </div>
-    <img className="splash-img" src="http://res.cloudinary.com/dfufqfnjx/image/upload/v1478371800/Concert_hledmj.jpg"/>
   </div>
 );
 
