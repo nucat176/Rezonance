@@ -6,7 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-User.create(username: "guest", password: "password")
+User.create(username: "Guest", password: "password")
 Track.create(title: "Shameless", artist_id: 2, album_id: 2, track_url: "http://res.cloudinary.com/dfufqfnjx/video/upload/v1478372611/08_Shameless_o8jp5a.mp3", cover_url: "http://res.cloudinary.com/dfufqfnjx/image/upload/v1478375780/99bf5594_yxka4k.jpg")
 Track.create(title: "Intro (original mix)", artist_id: 2, album_id: 2, track_url: "http://res.cloudinary.com/dfufqfnjx/video/upload/v1478714544/7903339_Intro_Original_Mix_maxbyl.wav", cover_url: "http://res.cloudinary.com/dfufqfnjx/image/upload/v1478714712/0ac72fbd02d03a8d2556e77e9e31ef18_ca0icw.jpg")
 Track.create(title: "Midnight City", artist_id: 2, album_id: 2, track_url: "http://res.cloudinary.com/dfufqfnjx/video/upload/v1478748936/zrpwse6nndwgkjrqfadq.mp3", cover_url: "http://res.cloudinary.com/dfufqfnjx/image/upload/v1478748916/abuxismdendwxivigque.jpg")

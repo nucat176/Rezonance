@@ -3,7 +3,6 @@
   color: white;
   align-items: center;
   background-color: rgba(0, 0, 0, .75);
-  width: 100%;
   border-left: 1px solid orange;
   border-right: 1px solid orange;
   border-bottom: 1px solid orange;
@@ -68,4 +67,22 @@
 
 .not-audio-player {
   height: fit-content;
+}
+
+.show-img {
+  width: 500px;
+  height: 500px;
+  cursor: pointer;
+}
+
+.brightness-show {
+  background-color: white;
+  display: inline-block;
+  height: 500px;
+  width: 500px;
+  background-image: url("http://res.cloudinary.com/dfufqfnjx/image/upload/c_scale,w_500/v1478648058/play-button-overlay-whtie_yuwnv2.png");
+}
+
+.brightness-show .show-img:hover {
+  opacity: .5;
 }

@@ -26,6 +26,8 @@ class CommentItem extends React.Component {
     return (
       <li className = "comment-item">
         <h1 className="comment-author">
+          {this.props.comment.user.username}:
+          &nbsp;
         </h1>
         <p className="comment-body">
           {this.props.comment.body}

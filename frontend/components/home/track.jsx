@@ -11,6 +11,7 @@ class Track extends React.Component {
     this.handleDelete = this.handleDelete.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
+    this.handleFetchCurrentTrack = this.handleFetchCurrentTrack.bind(this);
   }
 
   handleDelete(){
@@ -43,7 +44,11 @@ class Track extends React.Component {
   render(){
     return (
       <div className="track-page">
-        <img src={this.props.track.cover_url} className="show-img"/>
+        <div className="brightness-show">
+          <img src={this.props.track.cover_url}
+            className="show-img"
+            onClick={this.handleFetchCurrentTrack(this.state.trackId)}/>
+        </div>
         <div className="comments-box">
           <h1 className="track-show-title">{this.props.track.title}</h1>
           <div className="track-buttons">

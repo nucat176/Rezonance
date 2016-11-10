@@ -89,7 +89,7 @@ class AuthForm extends React.Component {
 			this.clearFields();
 		}
 
-		const demoUser = 'guest';
+		const demoUser = 'Guest';
 		let usernameID = setInterval(() => {
 			document.getElementById('username').focus();
 			let currLength = this.state.username.length;
