@@ -12,6 +12,7 @@ class Track extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
     this.handleFetchCurrentTrack = this.handleFetchCurrentTrack.bind(this);
+    this.renderTrackButtons = this.renderTrackButtons.bind(this);
   }
 
   handleDelete(){
@@ -26,6 +27,19 @@ class Track extends React.Component {
         this.props.receivePlaying(true);
       }
     );
+  }
+
+  renderTrackButtons(){
+    if(this.props.currentUser.id === this.props.track.user_id){
+      return (
+        <div className="track-buttons">
+          <button onClick={this.handleDelete} className="delete-button">Delete Track</button>
+          <UpdateTrackContainer/>
+        </div>
+      );
+    } else {
+      return (<span></span>);
+    }
   }
 
   handleSubmit(e){
@@ -51,10 +65,7 @@ class Track extends React.Component {
         </div>
         <div className="comments-box">
           <h1 className="track-show-title">{this.props.track.title}</h1>
-          <div className="track-buttons">
-            <button onClick={this.handleDelete} className="delete-button">Delete Track</button>
-            <UpdateTrackContainer/>
-          </div>
+          {this.renderTrackButtons()}
           <ul className="comments">
             {this.props.track.comments.map(comment => (
               <CommentItem

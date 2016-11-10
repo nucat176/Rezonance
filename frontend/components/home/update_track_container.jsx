@@ -5,7 +5,8 @@ import {updateTrack} from '../../actions/tracks_actions';
 const mapStateToProps = (state, ownProps) => {
   return {
   track: state.track,
-  errors: state.track.errors || []
+  errors: state.track.errors || [],
+  currentUser: state.session.currentUser
   };
 };
 

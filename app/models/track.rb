@@ -10,6 +10,7 @@
 #  updated_at :datetime         not null
 #  artist_id  :integer
 #  album_id   :integer
+#  user_id    :integer
 #
 
 class Track < ActiveRecord::Base
@@ -30,5 +31,10 @@ class Track < ActiveRecord::Base
     class_name: :Comment,
     primary_key: :id,
     foreign_key: :track_id
+
+  belongs_to :user,
+    class_name: :User,
+    primary_key: :id,
+    foreign_key: :user_id
 
 end

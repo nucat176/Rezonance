@@ -6,7 +6,11 @@ import ModalStyle from '../auth/modal_style';
 class Upload extends React.Component {
   constructor(props){
     super(props);
-    this.state = {title: "", trackUrl: "", coverUrl: "", modalOpen: false};
+    this.state = {title: "",
+      trackUrl: "",
+      coverUrl: "",
+      userId: this.props.currentUser.id,
+      modalOpen: false};
     this.handleSubmit = this.handleSubmit.bind(this);
     this._handleUploadClick = this._handleUploadClick.bind(this);
     this.closeModal = this.closeModal.bind(this);
@@ -21,7 +25,12 @@ class Upload extends React.Component {
 
   handleSubmit(e){
     e.preventDefault();
-    const track = {title: this.state.title, track_url: this.state.trackUrl, cover_url: this.state.coverUrl};
+    const track = {
+      title: this.state.title,
+      track_url: this.state.trackUrl,
+      cover_url: this.state.coverUrl,
+      user_id: this.state.userId
+    };
     this.props.createTrack(track);
     this.closeModal();
   }

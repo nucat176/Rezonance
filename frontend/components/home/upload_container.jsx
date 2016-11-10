@@ -3,7 +3,8 @@ import Upload from './upload';
 import {createTrack} from '../../actions/tracks_actions';
 
 const mapStateToProps = state => ({
-  errors: state.track.errors || []
+  errors: state.track.errors || [],
+  currentUser: state.session.currentUser
 });
 
 const mapDispatchToProps = dispatch => ({
