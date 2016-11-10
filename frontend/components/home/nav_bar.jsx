@@ -28,7 +28,7 @@ class NavBar extends React.Component{
     return(
       <nav className="home-nav">
         <Link to="/home" className="header-link">
-          <img className="logo" src="http://www.clipartkid.com/images/703/radio-waves-hpg-clip-art-at-clker-com-vector-clip-art-online-S1wXRS-clipart.png"/>
+          <img className="logo" src="http://res.cloudinary.com/dfufqfnjx/image/upload/co_rgb:e409f2/v1478808346/radio-waves-hpg-clip-art-at-clker-com-vector-clip-art-online-S1wXRS-clipart_mnvwdh.png"/>
           <h1>Rezonance</h1>
         </Link>
         <span className="option-buttons">
