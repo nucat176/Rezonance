@@ -1,17 +1,21 @@
 .upload-button {
-  padding: 10px;
   border: 1px solid white;
   border-radius: 2px;
   cursor: pointer;
   color: white;
-  margin-bottom: 20px;
   background-color: black;
+  padding: 10px;
+  width: 50%;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 50px;
 }
 
 .upload-input {
   border: 1px solid white;
   height: 40px;
-  width: 100%;
   margin-top: 10px;
   font-size: 12px;
   color: white;
@@ -26,4 +30,23 @@
 
 .upload-errors {
   color: white;
+}
+
+.upload-button-container {
+  height: 40px;
+  width: 100%;
+  display: flex;
+  margin: 10px;
+  align-items: center;
+}
+
+.check-mark {
+  height: 30px;
+  width: 30px;
+}
+
+.new-cover {
+  height: 50px;
+  width: 50px;
+  border: 1px solid white;
 }
