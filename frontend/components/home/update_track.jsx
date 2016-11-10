@@ -86,7 +86,7 @@ class UpdateTrack extends React.Component {
   render(){
     return (
       <div>
-        <span className="log-in-button" onClick={this._handleUploadClick}>Update Track</span>
+        <span className="delete-button" onClick={this._handleUploadClick}>Update Track</span>
         <Modal
           className='auth-form-modal'
           isOpen={this.state.modalOpen}

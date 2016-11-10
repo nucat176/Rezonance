@@ -26,4 +26,9 @@ class Track < ActiveRecord::Base
     primary_key: :id,
     foreign_key: :album_id
 
+  has_many :comments,
+    class_name: :Comment,
+    primary_key: :id,
+    foreign_key: :track_id
+
 end

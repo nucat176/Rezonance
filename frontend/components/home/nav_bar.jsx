@@ -8,6 +8,7 @@ class NavBar extends React.Component{
     super(props);
     this.handleLogout = this.handleLogout.bind(this);
     this.handleUpload = this.handleUpload.bind(this);
+    this.handleProfile = this.handleProfile.bind(this);
   }
 
   handleLogout(){
@@ -19,6 +20,10 @@ class NavBar extends React.Component{
     hashHistory.push("/home/upload");
   }
 
+  handleProfile(){
+    hashHistory.push(`/home/users/${this.props.currentUser.id}`);
+  }
+
   render(){
     return(
       <nav className="home-nav">
@@ -28,6 +33,7 @@ class NavBar extends React.Component{
         </Link>
         <span className="option-buttons">
           <UploadContainer/>
+          <button className="logout-button" onClick={this.handleProfile}>Profile</button>
           <button className="logout-button" onClick={this.handleLogout}>Log Out</button>
         </span>
       </nav>

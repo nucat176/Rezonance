@@ -7,7 +7,7 @@ class Profile extends React.Component {
 
   render(){
     return (
-      <h1>this.props.currentUser.username</h1>
+      <h1 className="profile-header">{this.props.currentUser.username}</h1>
     );
   }
 }
