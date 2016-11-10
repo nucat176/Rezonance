@@ -20,13 +20,21 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   background-color: rgba(0, 0, 0, .5);
 }
 
 .splash-header {
-  margin-top: 550px;
   font-size: 50px;
   color: orange;
+}
+
+.splash-stuff {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  padding-bottom: 5%;
 }
 
 .header-link {
@@ -146,7 +154,6 @@
 }
 
 .splash-description {
-  width: 50%;
   display: flex;
   text-align: center;
   margin-top: 30px;
