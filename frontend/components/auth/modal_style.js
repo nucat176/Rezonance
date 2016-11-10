@@ -13,7 +13,7 @@ const ModalStyle = {
     position        : 'absolute',
     top             : '150px',
     width           : '500px',
-    height          : '400px',
+    height          : '450px',
     border          : '1px solid #ccc',
     backgroundColor : 'rgba(0, 0, 0, .75)'
   }

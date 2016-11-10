@@ -147,17 +147,23 @@ class AuthForm extends React.Component {
               </div>
               <div className="login-form">
                 {this.createFormHeader()}
-                <input type='text'
-                  id="username"
-                  placeholder="Username"
-                  onChange={this.update("username")}
-                  className="login-input"/>
+                <div className='username-container'>
+                  <h1 className="username-header">Username</h1>
+                  <input type='text'
+                    id="username"
+                    value={this.state.username}
+                    onChange={this.update("username")}
+                    className="login-input"/>
+                </div>
                 <br/>
-                <input type='password'
-                  id="password"
-                  placeholder="Password (Must be at least 6 characters)"
-                  onChange={this.update("password")}
-                  className="login-input"/>
+                <div className='username-container'>
+                  <h1 className="username-header">Password</h1>
+                  <input type='password'
+                    id="password"
+                    value={this.state.password}
+                    onChange={this.update("password")}
+                    className="login-input"/>
+                </div>
                 <br/>
                 <input className="auth-form-submit-button" type="submit" value="Continue"/>
                 <br/>
