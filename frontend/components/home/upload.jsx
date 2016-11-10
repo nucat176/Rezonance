@@ -15,6 +15,8 @@ class Upload extends React.Component {
     this._handleUploadCover = this._handleUploadCover.bind(this);
     this._handleUploadTrackUrl = this._handleUploadTrackUrl.bind(this);
     this._handleUploadCoverUrl = this._handleUploadCoverUrl.bind(this);
+    this.renderTrackCheckMark = this.renderTrackCheckMark.bind(this);
+    this.renderCoverCheckMark = this.renderCoverCheckMark.bind(this);
   }
 
   handleSubmit(e){
@@ -79,6 +81,30 @@ class Upload extends React.Component {
     );
   }
 
+  renderTrackCheckMark(){
+    if(this.state.trackUrl === ""){
+      return (<span></span>);
+    } else {
+      return (
+        <img
+          src="http://res.cloudinary.com/dfufqfnjx/image/upload/v1478803219/green-check-mark_uxh4dx.svg"
+          className="check-mark"/>
+      );
+    }
+  }
+
+  renderCoverCheckMark(){
+    if(this.state.coverUrl === ""){
+      return (<span></span>);
+    } else {
+      return (
+        <img
+          src={this.state.coverUrl}
+          className="new-cover"/>
+      );
+    }
+  }
+
   render(){
     return (
       <div>
@@ -100,8 +126,14 @@ class Upload extends React.Component {
                   onChange={this.update("title")}
                   className="upload-input"/>
                 <br/>
-                <button className="upload-button" onClick={this._handleUploadCoverUrl}>Upload Album Cover</button>
-                <button className="upload-button" onClick={this._handleUploadTrackUrl}>Upload Track File</button>
+                <span className='upload-button-container'>
+                  <button className="upload-button" onClick={this._handleUploadCoverUrl}>Upload Album Cover</button>
+                  {this.renderCoverCheckMark()}
+                </span>
+                <span className='upload-button-container'>
+                  <button className="upload-button" onClick={this._handleUploadTrackUrl}>Upload Track File</button>
+                  {this.renderTrackCheckMark()}
+                </span>
                 <input className="auth-form-submit-button" type="submit" value="Upload"/>
                 <br/>
                 <button className="modal-close" onClick={this.closeModal}>Close</button>
