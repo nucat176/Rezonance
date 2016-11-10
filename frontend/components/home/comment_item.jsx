@@ -10,7 +10,7 @@ class CommentItem extends React.Component {
   renderDeleteButton(){
     if(this.props.currentUserId === this.props.comment.user.id){
       return (
-        <button onClick={this.handleDelete} className="delete-button">Delete</button>
+        <button onClick={this.handleDelete} className="comment-delete-button">Delete</button>
       );
     } else {
       return (<span></span>);

@@ -26,7 +26,7 @@ class UpdateTrack extends React.Component {
   }
 
   componentDidMount(){
-    this.setState({title: this.props.track.title, trackUrl: this.props.track.track_url, coverUrl: this.props.track.cover_url});
+    this.setState({title: this.props.track.title});
   }
 
   handleSubmit(e){
@@ -138,7 +138,7 @@ class UpdateTrack extends React.Component {
               <div className="login-form">
                 <h1 className="upload-title">Update Track</h1>
                 <input type="text"
-                  placeholder="Track title"
+                  value={this.state.title}
                   onChange={this.update("title")}
                   className="upload-input"/>
                 <br/>

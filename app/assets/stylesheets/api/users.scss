@@ -1,3 +1,37 @@
 // Place all the styles related to the api/users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.profile-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0, 0, 0, .75);
+  border-left: 1px solid purple;
+  border-right: 1px solid purple;
+  border-bottom: 1px solid purple;
+}
+
+.profile-header {
+  font-size: 30px;
+  padding: 20px;
+  color: orange;
+}
+
+.uploads-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  width: 100%;
+}
+
+.uploads-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.uploaded-tracks-title {
+  color: white;
+  font-size: 20px;
+}

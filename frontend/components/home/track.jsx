@@ -66,6 +66,7 @@ class Track extends React.Component {
         <div className="comments-box">
           <h1 className="track-show-title">{this.props.track.title}</h1>
           {this.renderTrackButtons()}
+          <h1 className='comments-title'>Join the discussion!</h1>
           <ul className="comments">
             {this.props.track.comments.map(comment => (
               <CommentItem

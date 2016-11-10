@@ -25,6 +25,12 @@
 .track-show-title {
   font-size: 40px;
   margin: 20px;
+  color: orange;
+}
+
+.comments-title {
+  font-size: 24px;
+  margin-top: 40px;
 }
 
 .track-index-title {
@@ -41,6 +47,8 @@
 .comment-item {
   display: flex;
   align-items: center;
+  height: 40px;
+  margin: 20px;
 }
 
 .add-comment-form {
@@ -50,6 +58,14 @@
   border: 1px solid white;
 }
 
+.comment-delete-button {
+  border: 1px solid white;
+  border-radius: 2px;
+  padding: 2px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
 .comments-box {
   display: flex;
   flex-direction: column;
@@ -57,6 +73,11 @@
   height: 100%;
   position: absolute;
   left: 55%;
+}
+
+.comments {
+  display: flex;
+  flex-direction: column;
 }
 
 .comment-form-submit-button {
