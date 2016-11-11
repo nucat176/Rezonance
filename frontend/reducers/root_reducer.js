@@ -8,6 +8,7 @@ import AlbumsReducer from './albums_reducer';
 import CurrentTrackReducer from './current_track_reducer';
 import PlaybackReducer from './playback_reducer';
 import CommentsReducer from './comments_reducer';
+import UserReducer from './user_reducer';
 
 export default combineReducers({
   session: SessionReducer,
@@ -17,5 +18,6 @@ export default combineReducers({
   track: TrackReducer,
   artists: ArtistsReducer,
   albums: AlbumsReducer,
-  comments: CommentsReducer
+  comments: CommentsReducer,
+  user: UserReducer
 });

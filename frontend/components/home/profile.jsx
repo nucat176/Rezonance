@@ -24,11 +24,11 @@ class Profile extends React.Component {
   render(){
     return (
       <div className="profile-page">
-        <h1 className="profile-header">{this.props.currentUser.username}</h1>
+        <h1 className="profile-header">{this.props.user.username}</h1>
           <section className="uploads-section">
             <h1 className="uploaded-tracks-title">Uploaded Tracks</h1>
             <ul className="uploads-list">
-              {this.props.currentUser.tracks.map(track => (
+              {this.props.user.tracks.map(track => (
                 <TrackItem
                   key={track.id}
                   track={track}

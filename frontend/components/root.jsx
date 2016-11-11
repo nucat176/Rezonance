@@ -13,6 +13,7 @@ import ProfileContainer from './home/profile_container';
 import {fetchTracks, fetchTrack} from '../actions/tracks_actions';
 import {fetchArtists} from '../actions/artist_actions';
 import {fetchAlbums} from '../actions/album_actions';
+import {fetchUser} from '../actions/user_actions';
 
 
 const Root = ({store}) => {
@@ -40,6 +41,10 @@ const Root = ({store}) => {
     store.dispatch(fetchAlbums());
   };
 
+  const _fetchUser = (nextState) => {
+    store.dispatch(fetchUser(nextState.params.id));
+  };
+
   return (
     <Provider store={store}>
       <Router history={hashHistory}>
@@ -50,7 +55,7 @@ const Root = ({store}) => {
             <Route path="tracks/:id" component={TrackContainer} onEnter={_fetchTrack}/>
             <Route path="artists" component={ArtistsContainer} onEnter={_fetchArtists}/>
             <Route path="albums" component={AlbumsContainer} onEnter={_fetchAlbums}/>
-            <Route path="users/:id" component={ProfileContainer}/>
+            <Route path="users/:id" component={ProfileContainer} onEnter={_fetchUser}/>
           </Route>
         </Route>
       </Router>

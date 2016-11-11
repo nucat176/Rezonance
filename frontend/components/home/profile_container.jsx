@@ -3,7 +3,7 @@ import Profile from './profile';
 import { fetchTracks, deleteTrack, createTrack, fetchTrack, fetchCurrentTrack, receivePlaying } from '../../actions/tracks_actions';
 
 const mapStateToProps = state => ({
-  user: state.track.user
+  user: state.user
 });
 
 const mapDispatchToProps = dispatch => ({
