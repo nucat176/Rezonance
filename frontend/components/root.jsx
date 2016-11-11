@@ -50,7 +50,7 @@ const Root = ({store}) => {
             <Route path="tracks/:id" component={TrackContainer} onEnter={_fetchTrack}/>
             <Route path="artists" component={ArtistsContainer} onEnter={_fetchArtists}/>
             <Route path="albums" component={AlbumsContainer} onEnter={_fetchAlbums}/>
-            <Route path="users/:id" component={ProfileContainer} onEnter={_redirectIfLoggedOut}/>
+            <Route path="users/:id" component={ProfileContainer}/>
           </Route>
         </Route>
       </Router>

@@ -13,7 +13,8 @@ const _defaultTrack = {
   title: "",
   track_url: "",
   cover_url: "",
-  comments: []
+  comments: [],
+  user: {username: ""}
 };
 
 export default (state = _defaultTrack, action) => {

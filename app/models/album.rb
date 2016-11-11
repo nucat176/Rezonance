@@ -13,7 +13,7 @@
 
 class Album < ActiveRecord::Base
 
-  validates :title, :genre, :artist_id, :cover_url, null: false
+  validates :title, :genre, :cover_url, null: false
 
   belongs_to :artist,
     class_name: :Artist,
