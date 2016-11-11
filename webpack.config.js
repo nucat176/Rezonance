@@ -1,5 +1,5 @@
 module.exports = {
-  entry: './frontend/rezonance.jsx',
+  entry: ['babel-polyfill', './frontend/rezonance.jsx'],
   output: {
     path: 'app/assets/javascripts',
     filename: 'bundle.js',
