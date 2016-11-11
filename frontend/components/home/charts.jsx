@@ -1,5 +1,6 @@
 import React from 'react';
 import TrackItem from './track_item';
+import Carousel from 'nuka-carousel';
 
 class Charts extends React.Component {
   constructor(props){
@@ -25,13 +26,15 @@ class Charts extends React.Component {
     return (
       <section className="tracks-section">
         <ul className="tracks-list">
-          {this.props.tracks.map(track => (
-            <TrackItem
-              key={track.id}
-              track={track}
-              handleCurrentClick={this.handleFetchCurrentTrack(track.id)}
-              handleClick={this.handleFetchTrack(track.id)}/>
-          ))}
+          <Carousel className='carousel' slidesToShow={7} cellSpacing={20}>
+            {this.props.tracks.map(track => (
+              <TrackItem
+                key={track.id}
+                track={track}
+                handleCurrentClick={this.handleFetchCurrentTrack(track.id)}
+                handleClick={this.handleFetchTrack(track.id)}/>
+            ))}
+          </Carousel>
         </ul>
       </section>
     );
